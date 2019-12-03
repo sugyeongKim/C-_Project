@@ -4,6 +4,8 @@
 
 int main() {
 	Menu h;
+	Member m;
+	m.setting();
 	int key;
 	while ((key = h.Start()) != 3) {
 		//h.Start();

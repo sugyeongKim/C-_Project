@@ -13,10 +13,10 @@ int main() {
 	MYSQL_RES *Result = NULL; // 쿼리 결과 담는 구조체 포인터
 	MYSQL_ROW Row; //쿼리 성공시 결과의 행 정보 담는 구조체
 	int stat; // 쿼리 요청 후 결과
-	int fields;
+	int fields; // 
 
 	mysql_init(&mysql);
-	connection = mysql_real_connect(&mysql, "localhost", "root", "mirim2", "hotel", 3306, NULL, 0);
+	connection = mysql_real_connect(&mysql, "localhost", "root", "mirim2", "chotel", 3306, NULL, 0);
 	if (connection == NULL){
 		cout << "error: " << mysql_error(&mysql);
 		return 1;
@@ -42,6 +42,7 @@ int main() {
 			cout << Row[i]<< ",";
 		cout << endl;
 	}
+
 	mysql_free_result(Result);
 	mysql_close(connection);
 	return 0;

@@ -1,29 +1,12 @@
 #include "Room.h"
 
-Room::Room() {
-	//¿œπ› »£Ω«
-	for (int i = 1; i <= 3; i++) {
-		for (int j = 1; j <= 5; j++) {
-			r.room_num = i*100 + j;
-			r.room_use = 0; 
-			r.uid = "";
-			r.date_in = "";
-			r.date_out = "";
-			Com.push_back(r);
-		}
-	}
-
-	//vip∑Î
-	for (int i = 4; i <= 6; i++) {
-		for (int j = 1; j <= 5; j++) {
-			r.room_num = i*100 + j;
-			r.room_use = 0;
-			r.uid = "";
-			r.date_in = "";
-			r.date_out = "";
-			Vip.push_back(r);
-		}
-	}
+Room::Room(string type, int num, int use, string uid, string date_in, string date_out) {
+	this->room_type = type;
+	this->room_num = num;
+	this->room_use = use;
+	this->uid = uid;
+	this->date_in = date_in;
+	this->date_out = date_out;
 };
 
 void Room::Reservation() {
