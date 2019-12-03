@@ -8,13 +8,14 @@
 struct room {
 	int room_num; //호실
 	int room_use; //예약중인지 아닌지 1이면 예약중
-	string user; //사용자 이름
-	string date_inL; //체크인 날짜
+	string uid; //사용자 아이디
+	string date_in; //체크인 날짜
 	string date_out; //체크아웃 날짜
-	Member** base; //회원과 연결
+	//Member** base; //회원과 연결
 
-	friend ostream& operator <<(ostream& os, const room& score);
+	friend ostream& operator <<(ostream& os, const room& room);
 };
+
 
 class Room {
 	room r;

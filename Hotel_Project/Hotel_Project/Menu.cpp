@@ -61,7 +61,7 @@ int Menu::Owner_Menu() {
 	y += 2; gotoxy(x + 2, y);
 	cout << "<2> 객실 현황";
 	y += 2; gotoxy(x + 2, y);
-	cout << "<3> 회원 관리";
+	cout << "<3> 회원 목록";
 	y += 2; gotoxy(x + 2, y);
 	cout << "<4> 메인으로";
 	y++; gotoxy(x - 20, y);
@@ -124,7 +124,7 @@ void Menu::guestShow() {
 		switch (key) {
 		case 1:Member::JoinMember(); break;
 		case 2:
-			//while (modifyMember() != 1); break;
+			while (Member::ModifyMember() != 1); break;
 		//case 3:deleteMember(); break;
 		//case 4:ReserveRoom(); break;
 		case 5: CheckIn(); break;

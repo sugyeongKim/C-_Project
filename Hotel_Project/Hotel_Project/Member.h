@@ -27,11 +27,12 @@ private:
 	vector<member> mem;
 public:
 	int x = 50, y = 18, key;
-	void ModifyMember(member pthis); //회원정보수정
+	int ModifyMember(); //회원정보수정
 	void JoinMember(); //회원가입?
 	void DeleteMember(member pthis); //회원탈퇴?
 	void ShowMember();//멤버 보여주기
 	void SearchMember(); //회원검색
 	void SetMember(member member); //벡터에 멤버넣기?
+	void PrintMember(); //회원 출력
 };
 #endif // Member_H

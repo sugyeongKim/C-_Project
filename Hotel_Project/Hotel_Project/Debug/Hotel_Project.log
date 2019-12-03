@@ -1,3 +1,2 @@
-﻿  Menu.cpp
-c:\hotel_project\hotel_project\hotel_project\menu.cpp(4): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
+﻿  dbtest.cpp
   Hotel_Project.vcxproj -> C:\Hotel_Project\Hotel_Project\Debug\Hotel_Project.exe
