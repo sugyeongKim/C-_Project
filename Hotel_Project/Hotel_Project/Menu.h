@@ -3,12 +3,13 @@
 #ifndef MENU_H
 #define MENU_H
 
-#include <Windows.h>
-#include <conio.h>
 #include <iostream>
-#include <string>
 #include "Room.h"
 #include "Member.h"
+#include <Windows.h>
+#include <conio.h>
+#include <string>
+
 using namespace std;
 
 const int X = 50;

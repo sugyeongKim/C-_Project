@@ -113,7 +113,7 @@ void Menu::ownerShow() {
 			}
 			break;
 		case 2: Room::ShowRoom(); break;
-		case 3: Room::Reservation(); break;
+		case 3: Member::ShowMember(); break;
 		case 4: break;
 		}
 	}
@@ -125,7 +125,7 @@ void Menu::guestShow() {
 		case 1:Member::JoinMember(); break;
 		case 2:
 			while (Member::ModifyMember() != 1); break;
-		//case 3:deleteMember(); break;
+		case 3:Member::DeleteMember(); break;
 		//case 4:ReserveRoom(); break;
 		case 5: CheckIn(); break;
 		case 6: CheckOut(); break;

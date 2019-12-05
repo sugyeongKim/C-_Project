@@ -1,6 +1,6 @@
+#include <WinSock2.h>
 #include <iostream>
 #include <my_global.h>
-#include <WinSock2.h>
 #include <mysql.h>
 #pragma comment(lib, "libmysql.lib")
 

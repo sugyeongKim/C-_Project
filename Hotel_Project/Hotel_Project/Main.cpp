@@ -1,20 +1,23 @@
-#include "Member.h"
 #include "Menu.h"
-#include "Room.h"
 
 int main() {
-	Menu h;
-	Member m;
-	m.setting();
+	Menu* h = new Menu();
+	Member* m = new Member();
+	Room* r = new Room();
+	r->DBconnecter();
 	int key;
-	while ((key = h.Start()) != 3) {
+	r->SetRoom(); // 일반룸 5개, vip룸 5개를 먼저 세팅
+	while ((key = h->Start()) != 3) {
 		//h.Start();
 		switch (key) {
 		case 1:
-			h.ownerShow(); break;
+			h->ownerShow(); break;
 		case 2:
-			h.guestShow(); break;
-		case 3: return 0;
+			h->guestShow(); break;
+		case 3: break;
 		}
 	}
+	r->deleteAllR(); // 만들어놓은 방 삭제
+	//m->deleteAllM();
+	return 0;
 }
