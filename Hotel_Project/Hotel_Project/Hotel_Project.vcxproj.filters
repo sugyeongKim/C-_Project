@@ -15,12 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Hotel.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Hotel.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -34,9 +28,6 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="설정.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="dbtest.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

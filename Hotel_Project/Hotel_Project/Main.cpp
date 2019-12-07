@@ -6,7 +6,7 @@ int main() {
 	Room* r = new Room();
 	r->DBconnecter();
 	int key;
-	r->SetRoom(); // 일반룸 5개, vip룸 5개를 먼저 세팅
+	r->SetRoom(); 
 	while ((key = h->Start()) != 3) {
 		//h.Start();
 		switch (key) {

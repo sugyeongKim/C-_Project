@@ -57,7 +57,7 @@ int Menu::Owner_Menu() {
 	y++; gotoxy(x - 20, y);
 	cout << "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━";
 	y++; gotoxy(x + 2, y);
-	cout << "<1> 객실 관리";
+	cout << "<1> 객실 가격";
 	y += 2; gotoxy(x + 2, y);
 	cout << "<2> 객실 현황";
 	y += 2; gotoxy(x + 2, y);
@@ -87,7 +87,7 @@ int Menu::Guest_Menu() {
 	y += 2; gotoxy(x + 2, y);
 	cout << "<4> 예약";
 	y += 2; gotoxy(x + 2, y);
-	cout << "<5> 체크인";
+	cout << "<5> 룸서비스";
 	y += 2; gotoxy(x + 2, y);
 	cout << "<6> 체크아웃";
 	y += 2; gotoxy(x + 2, y);
@@ -103,53 +103,45 @@ int Menu::Guest_Menu() {
 void Menu::ownerShow() {
 	while ((key = Owner_Menu()) != 4) {
 		switch (key) {
-		case 1:
-			while ((key = Room_Set()) != 3) {
-				switch (key) {
-				case 1:Room::addroom(); break;
-				case 2:Room::deleteroom(); break;
-				case 3:break;
-				}
-			}
-			break;
-		case 2: Room::ShowRoom(); break;
-		case 3: Member::ShowMember(); break;
-		case 4: break;
+			case 1:Room::addroom(); break; //룸 추가하기
+			case 2: Room::RoomStatus(); break; //룸 현황 보기    ok
+			case 3: Member::ShowMember(); break; //회원 정보 보기 (수정같은건 못함 그냥 확인용) ok
+			case 4: break;
 		}
 	}
 }
 
 void Menu::guestShow() {
 	while ((key = Guest_Menu()) != 7) {
-		switch (key) {
-		case 1:Member::JoinMember(); break;
-		case 2:
-			while (Member::ModifyMember() != 1); break;
-		case 3:Member::DeleteMember(); break;
-		//case 4:ReserveRoom(); break;
-		case 5: CheckIn(); break;
-		case 6: CheckOut(); break;
+		switch (key) {  
+		case 1:Member::JoinMember(); break; // 회원가입  ok
+		case 2: 
+			while (Member::ModifyMember() != 1); break; //회원 정보 수정 ok
+		case 3:Member::DeleteMember(); break;  //회원 탈퇴  ok
+		case 4:Room::Reservation(); break; //예약&체크인 하기
+		case 5:Room::roomservice(); break; //룸서비스 신청하기
+		case 6:Room::CheckOut(); break; //체크아웃하기
 		case 7: break;
 		}
 	}
 }
 
-	int Menu::Room_Set() {
-		system("cls");
-		gotoxy(x, y);
-		cout << "### 객실 관리 ###";
-		y++; gotoxy(x - 20, y);
-		cout << "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━";
-		y++; gotoxy(x + 2, y);
-		cout << "<1> 객실 추가";
-		y += 2; gotoxy(x + 2, y);
-		cout << "<2> 객실 삭제";
-		y += 2; gotoxy(x + 2, y);
-		cout << "<3> 이전으로";
-		y++; gotoxy(x - 20, y);
-		cout << "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" << endl;
-		y += 2; gotoxy(x + 2, y);
-		cout << ">> ";
-		x = X; y = 5;
-		return KeyPress();
-	}
+/*int Menu::Room_Set() {
+	system("cls");
+	gotoxy(x, y);
+	cout << "### 객실 관리 ###";
+	y++; gotoxy(x - 20, y);
+	cout << "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━";
+	y++; gotoxy(x + 2, y);
+	cout << "<1> 객실 추가";
+	y += 2; gotoxy(x + 2, y);
+	cout << "<2> 객실 삭제";
+	y += 2; gotoxy(x + 2, y);
+	cout << "<3> 이전으로";
+	y++; gotoxy(x - 20, y);
+	cout << "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" << endl;
+	y += 2; gotoxy(x + 2, y);
+	cout << ">> ";
+	x = X; y = 5;
+	return KeyPress();
+	}*/

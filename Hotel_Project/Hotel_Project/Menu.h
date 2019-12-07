@@ -27,7 +27,6 @@ public:
 	void ownerShow();
 	int Owner_Menu();
 	int Guest_Menu();
-	int Room_Set();
 	void guestShow();
 
 };
