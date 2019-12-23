@@ -25,7 +25,6 @@ Room::~Room(){
 int Room::Reservation() {
 	//회원만 예약할 수 있음.
 	//체크인할 수 있는 최소 시간을 여기서 정함
-	//여기서 다 쓰면 그냥 체크인되는걸루 하고,,
 	int num,n;
 	char id[20]; char* i;
 	system("cls");
