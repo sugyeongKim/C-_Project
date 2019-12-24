@@ -125,23 +125,3 @@ void Menu::guestShow() {
 		}
 	}
 }
-
-/*int Menu::Room_Set() {
-	system("cls");
-	gotoxy(x, y);
-	cout << "### 偌褒 婦葬 ###";
-	y++; gotoxy(x - 20, y);
-	cout << "收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收";
-	y++; gotoxy(x + 2, y);
-	cout << "<1> 偌褒 蹺陛";
-	y += 2; gotoxy(x + 2, y);
-	cout << "<2> 偌褒 餉薯";
-	y += 2; gotoxy(x + 2, y);
-	cout << "<3> 檜瞪戲煎";
-	y++; gotoxy(x - 20, y);
-	cout << "收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收" << endl;
-	y += 2; gotoxy(x + 2, y);
-	cout << ">> ";
-	x = X; y = 5;
-	return KeyPress();
-	}*/

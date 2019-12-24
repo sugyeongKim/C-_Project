@@ -29,8 +29,7 @@ Member::~Member() {
 }
 
 int Member::DeleteMember() {
-	//int choice, i, num;
-	char uid[20]; //componet[20];// , find[20];
+	char uid[20]; 
 	char* finder;
 	system("cls");
 	
@@ -161,9 +160,6 @@ int Member::ModifyMember() {
 		system("PAUSE");
 		return 1;
 	}
-	//Result = mysql_store_result(connection);
-	//Row = mysql_fetch_row(Result);
-	//cout << Row[0];
 		
 
 	system("cls");

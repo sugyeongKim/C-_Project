@@ -18,6 +18,5 @@ int main() {
 		}
 	}
 	r->deleteAllR(); // 만들어놓은 방 삭제
-	//m->deleteAllM();
 	return 0;
 }

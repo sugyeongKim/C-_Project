@@ -36,23 +36,7 @@ int Room::Reservation() {
 	y++; m->gotoxy(x - 20, y);
 	cout << "예약자 ID: "; cin >> id; 
 	i = id;
-	//mem->checkMember(i);
-
-	/*sprintf_s(Query, 256, "select * from member where id = '%s'", i);
-	stat = mysql_query(connection, Query);
-	Result = mysql_store_result(connection);
-	Row = mysql_fetch_row(Result);
-	if (stat != 0) {
-		cout << "error: " << mysql_error(&mysql);
-		return 1;
-	}
-	cout << Row[6] << "," << Row[8];
-	sprintf_s(Query, 256, "update member set point = %d, chk = 1, cnt = %d where id='%s'", (atoi(Row[6]) + 50), atoi(Row[8]) + 1,i);
-	stat = mysql_query(connection, Query);
-	if (stat != 0) {
-		cout << "error: " << mysql_error(&mysql);
-		return 1;
-	}*/
+	
 
 	//만약 회원중에 같은 id가 있으면 사용횟수와 포인트가 증가하지만 없을경우 그냥 비회원으로 처리됨. 비회원은 사용횟수, 포인트따위 없다ㅎㅎ
 	y++; m->gotoxy(x - 20, y);

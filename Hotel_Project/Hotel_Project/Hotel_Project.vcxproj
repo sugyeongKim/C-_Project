@@ -137,7 +137,6 @@
     <ClCompile Include="Member.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Room.cpp" />
-    <ClCompile Include="설정.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Member.h" />
