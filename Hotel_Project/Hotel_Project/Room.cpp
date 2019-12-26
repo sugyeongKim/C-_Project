@@ -89,7 +89,7 @@ int Room::Reservation() {
 	}
 	m->gotoxy(x - 20, y);
 	cout <<">> "; cin >> n; 
-	//예약한 멤버 DB 업데이트!
+	//예약한 멤버 DB 업데이트
 	sprintf_s(Query, 256, "select * from member where id = '%s'", i);
 	stat = mysql_query(connection, Query);
 	Result = mysql_store_result(connection);
